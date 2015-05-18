@@ -74,8 +74,8 @@ angular.module('starter.controllers', [])
         $scope.member = Members.selectedMember;
 
         $scope.call = function(){
-            console.log("Starting call with:", Members.selectedMember.email); // todo: delete me
-            window.location = "sip:" + Members.selectedMember.email;
+            console.log("Starting call with:", Members.selectedMember.tel); // todo: delete me
+            window.location = "sip:" + Members.selectedMember.tel;
         };
 
         $scope.im = function(){
