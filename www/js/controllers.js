@@ -90,12 +90,12 @@ angular.module('starter.controllers', [])
         return{
             "name": "Members",
             data: [
-                {id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", o365email: "ctouser2@allenovery.onmicrosoft.com", tel: "1442002"},
-                {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442003"},
-                {id: "3", firstName: "Bushra", lastName: "Vashida", photo: "vashidab.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442004"},
-                {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", o365email: "ctouser1@allenovery.onmicrosoft.com", tel: "1442001"},
-                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", o365email: "ian.verrico@allenovery.onmicrosoft.com", tel: "1444254"},
-                {id: "5", firstName: "Dave", lastName: "Gifford", photo: "giffordd.jpg", o365email: "dave.gifford@allenovery.onmicrosoft.com", tel: "1444219"}
+                {id: "1", firstName: "Sara", lastName: "Daniels", role:"Associate", photo: "danielss.jpg", o365email: "ctouser2@allenovery.onmicrosoft.com", tel: "1442002"},
+                {id: "2", firstName: "Caroline", lastName: "Howard", role:"Matter Manager", photo: "howardc.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442003"},
+                {id: "3", firstName: "Bushra", lastName: "Vashida", role:"Associate", photo: "vashidab.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442004"},
+                {id: "4", firstName: "Toby", lastName: "Roberts", role:"Associate", photo: "robertst.jpg", o365email: "ctouser1@allenovery.onmicrosoft.com", tel: "1442001"},
+                {id: "5", firstName: "Ian", lastName: "Verrico", role:"Partner", photo: "verricoi.jpg", o365email: "ian.verrico@allenovery.onmicrosoft.com", tel: "1444254"},
+                {id: "5", firstName: "Dave", lastName: "Gifford", role:"Partner", photo: "giffordd.jpg", o365email: "dave.gifford@allenovery.onmicrosoft.com", tel: "1444219"}
             ],
             selectedMember:{}
 
