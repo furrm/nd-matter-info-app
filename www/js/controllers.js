@@ -79,8 +79,8 @@ angular.module('starter.controllers', [])
         };
 
         $scope.im = function(){
-            console.log("Starting IM with:", Members.selectedMember.email); // todo: delete me
-            window.location = "xmpp:" + Members.selectedMember.email;
+            console.log("Starting IM with:", Members.selectedMember.o365email); // todo: delete me
+            window.location = "xmpp:" + Members.selectedMember.o365email;
         };
 
 
@@ -90,11 +90,11 @@ angular.module('starter.controllers', [])
         return{
             "name": "Members",
             data: [
-                {id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", email: "danielss@allenovery.com", tel: "1442002"},
-                {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", email: "howardc@allenovery.com", tel: "1442003"},
-                {id: "3", firstName: "Bashra", lastName: "Vashida", photo: "vashidab.jpg", email: "vashidabo@allenovery.com", tel: "1442004"},
-                {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", email: "robertst@allenovery.com", tel: "1442001"},
-                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", email: "ian.verrico@allenovery.com", tel: "1444254"}
+                {id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", o365email: "ctouser2@allenovery.onmicrosoft.com", tel: "1442002"},
+                {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442003"},
+                {id: "3", firstName: "Bushra", lastName: "Vashida", photo: "vashidab.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442004"},
+                {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", o365email: "ctouser1@allenovery.onmicrosoft.com", tel: "1442001"},
+                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", o365email: "ian.verrico@allenovery.onmicrosoft.com", tel: "1444254"}
             ],
             selectedMember:{}
 
