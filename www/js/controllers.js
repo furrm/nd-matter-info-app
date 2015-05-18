@@ -94,7 +94,8 @@ angular.module('starter.controllers', [])
                 {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442003"},
                 {id: "3", firstName: "Bushra", lastName: "Vashida", photo: "vashidab.jpg", o365email: "ctouser4@allenovery.onmicrosoft.com", tel: "1442004"},
                 {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", o365email: "ctouser1@allenovery.onmicrosoft.com", tel: "1442001"},
-                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", o365email: "ian.verrico@allenovery.onmicrosoft.com", tel: "1444254"}
+                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", o365email: "ian.verrico@allenovery.onmicrosoft.com", tel: "1444254"},
+                {id: "5", firstName: "Dave", lastName: "Gifford", photo: "giffordd.jpg", o365email: "dave.gifford@allenovery.onmicrosoft.com", tel: "1444219"}
             ],
             selectedMember:{}
 
