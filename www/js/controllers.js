@@ -75,7 +75,7 @@ angular.module('starter.controllers', [])
 
         $scope.makeCall = function(){
             console.log("Make Call!!"); // todo: delete me
-            window.open("sip:vashidab@aotil.com");
+            window.location = ("sip:vashidab@aotil.com");
         };
 
     }])
