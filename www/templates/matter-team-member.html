@@ -12,11 +12,13 @@
                     </div>
                     <div class="row">
                         <div class="col s6 center-align">
-                            <a href="sip:{{member.email}}" class="waves-effect waves-light btn" style="color: white;"><i class="mdi-communication-call left"></i>Call</a>
+                            <!--<a href="sip:{{member.email}}" class="waves-effect waves-light btn" style="color: white;"><i class="mdi-communication-call left"></i>Call</a>-->
+                            <a ng-click="makeCall()" class="btn" style="color: white;"><i class="mdi-communication-call left"></i>Call</a>
 
                         </div>
                         <div class="col s6 center-align">
-                            <a href="xmpp:{{member.email}}" class="waves-effect waves-light btn" style="color: white;"><i class="mdi-communication-comment left"></i>Chat</a>
+                            <a class="btn" ng-click="makeCall()">Test</a>
+                            <!--<a href="xmpp:{{member.email}}" class="waves-effect waves-light btn" style="color: white;"><i class="mdi-communication-comment left"></i>Chat</a>-->
 
                         </div>
                     </div>

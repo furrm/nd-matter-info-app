@@ -62,6 +62,7 @@ angular.module('starter.controllers', [])
         };
 
 
+
 //        $scope.$on("memberSelected", function(event, args){
 //            console.log("HEARD THE EVENT!!"); // todo: delete me
 //            $scope.member = "It Worked";
@@ -72,6 +73,10 @@ angular.module('starter.controllers', [])
 
         $scope.member = Members.selectedMember;
 
+        $scope.makeCall = function(){
+            console.log("Make Call!!"); // todo: delete me
+            window.open("sip:vashidab@aotil.com");
+        };
 
     }])
     .factory('Members', [function () {
