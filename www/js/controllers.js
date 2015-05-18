@@ -73,22 +73,30 @@ angular.module('starter.controllers', [])
 
         $scope.member = Members.selectedMember;
 
-        $scope.makeCall = function(){
-            console.log("Make Call!!"); // todo: delete me
-            window.location = ("sip:vashidab@aotil.com");
+        $scope.call = function(){
+            console.log("Starting call with:", Members.selectedMember.email); // todo: delete me
+            window.location = "sip:" + Members.selectedMember.email;
         };
+
+        $scope.im = function(){
+            console.log("Starting IM with:", Members.selectedMember.email); // todo: delete me
+            window.location = "xmpp:" + Members.selectedMember.email;
+        };
+
+
 
     }])
     .factory('Members', [function () {
         return{
             "name": "Members",
             data: [
-                {id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", email: "danielss@allenovery.com", tel: "1234"},
-                {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", email: "howardc@allenovery.com", tel: "1234"},
-                {id: "3", firstName: "Bashir", lastName: "Vashida", photo: "vashidab.jpg", email: "vashidabo@allenovery.com", tel: "1234"},
-                {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", email: "robertst@allenovery.com", tel: "1234"}
+                {id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", email: "danielss@allenovery.com", tel: "1442002"},
+                {id: "2", firstName: "Caroline", lastName: "Howard", photo: "howardc.jpg", email: "howardc@allenovery.com", tel: "1442003"},
+                {id: "3", firstName: "Bashra", lastName: "Vashida", photo: "vashidab.jpg", email: "vashidabo@allenovery.com", tel: "1442004"},
+                {id: "4", firstName: "Toby", lastName: "Roberts", photo: "robertst.jpg", email: "robertst@allenovery.com", tel: "1442001"},
+                {id: "5", firstName: "Ian", lastName: "Verrico", photo: "verricoi.jpg", email: "ian.verrico@allenovery.com", tel: "1444254"}
             ],
-            selectedMember:{id: "1", firstName: "Sara", lastName: "Daniels", photo: "danielss.jpg", email: "danielss@allenovery.com", tel: "1234"}
+            selectedMember:{}
 
         }
     }])
