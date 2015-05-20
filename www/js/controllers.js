@@ -1,6 +1,10 @@
 angular.module('starter.controllers', [])
 
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, MatterFinance) {
+    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, MatterFinance, $stateParams) {
+
+        MatterFinance.selectedMatter.clientId = $stateParams.clientId;
+        MatterFinance.selectedMatter.matterId = $stateParams.matterId;
+
         // Form data for the login modal
         $scope.loginData = {};
 

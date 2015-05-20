@@ -72,8 +72,8 @@ angular.module('starter', [
                         controller: function($scope, $stateParams, MatterFinance){
                             $scope.title = "Matter Finance";
 
-                            MatterFinance.selectedMatter.clientId = $stateParams.clientId;
-                            MatterFinance.selectedMatter.matterId = $stateParams.matterId;
+                            //MatterFinance.selectedMatter.clientId = $stateParams.clientId;
+                            //MatterFinance.selectedMatter.matterId = $stateParams.matterId;
 
                             $scope.stateParams = $stateParams;
                             $scope.matterFinance = MatterFinance;
@@ -208,5 +208,5 @@ angular.module('starter', [
             })
         ;
         // if none of the above states are matched, use this as the fallback
-        $urlRouterProvider.otherwise('/app/matter-info');
+        $urlRouterProvider.otherwise('/app/matter-progress-tracker');
     });
