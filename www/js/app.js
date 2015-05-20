@@ -7,7 +7,8 @@
 angular.module('starter', [
     'ionic',
     'starter.controllers',
-//    'ngMaterial'
+    'services',
+    'fullscreen.radial'
 ])
 
     //.config(function($ionicConfigProvider) {
@@ -41,6 +42,51 @@ angular.module('starter', [
                 controller: 'AppCtrl'
             })
 
+            .state('app.matterProgressTracker', {
+//                url: "/matter-info",
+                url: "/matter-progress-tracker/:clientId/:matterId",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/matter-progress-tracker.html",
+                        controller: function($scope, $stateParams, MatterFinance){
+                            $scope.title = "Progress Tracker";
+                            $scope.routeParams = $stateParams;
+
+                            $scope.matterFinance = MatterFinance;
+
+                            console.log("$stateProvider", $stateProvider); // todo: delete me
+                            console.log("MatterFinance", MatterFinance); // todo: delete me
+
+
+                        }
+                    }
+                }
+            })
+
+            .state('app.matterFinance', {
+//                url: "/matter-info",
+                url: "/matter-finance/:clientId/:matterId",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/matter-finance.html",
+                        controller: function($scope, $stateParams, MatterFinance){
+                            $scope.title = "Matter Finance";
+
+                            MatterFinance.selectedMatter.clientId = $stateParams.clientId;
+                            MatterFinance.selectedMatter.matterId = $stateParams.matterId;
+
+                            $scope.stateParams = $stateParams;
+                            $scope.matterFinance = MatterFinance;
+
+                            console.log("$stateProvider", $stateProvider); // todo: delete me
+                            console.log("MatterFinance", MatterFinance); // todo: delete me
+
+
+                        }
+                    }
+                }
+            })
+
             .state('app.matterInfo', {
 //                url: "/matter-info",
                 url: "/matter-info/:clientId/:matterId",
@@ -57,6 +103,8 @@ angular.module('starter', [
                     }
                 }
             })
+
+
 
 
 
