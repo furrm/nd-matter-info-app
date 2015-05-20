@@ -49,8 +49,14 @@ angular.module('starter', [
                     'menuContent': {
                         templateUrl: "templates/matter-progress-tracker.html",
                         controller: function($scope, $stateParams, MatterFinance){
+
+
+
                             $scope.title = "Progress Tracker";
                             $scope.routeParams = $stateParams;
+
+                            MatterFinance.selectedMatter.clientId = $stateParams.clientId;
+                            MatterFinance.selectedMatter.matterId = $stateParams.matterId;
 
                             $scope.matterFinance = MatterFinance;
 
@@ -187,15 +193,7 @@ angular.module('starter', [
                     }
                 }
             })
-            .state('app.playlists', {
-                url: "/playlists",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/playlists.html",
-                        controller: 'PlaylistsCtrl'
-                    }
-                }
-            })
+
 
             .state('app.single', {
                 url: "/playlists/:playlistId",

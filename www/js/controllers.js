@@ -1,9 +1,8 @@
 angular.module('starter.controllers', [])
 
-    .controller('AppCtrl', function ($scope, $ionicModal, $timeout, MatterFinance, $stateParams) {
+    .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
 
-        MatterFinance.selectedMatter.clientId = $stateParams.clientId;
-        MatterFinance.selectedMatter.matterId = $stateParams.matterId;
+
 
         // Form data for the login modal
         $scope.loginData = {};
@@ -36,27 +35,15 @@ angular.module('starter.controllers', [])
             }, 1000);
         };
 
-        $scope.matterFinance = MatterFinance;
+
     })
 
-    .controller('PlaylistsCtrl', function ($scope) {
-        $scope.playlists = [
-            { title: 'Reggae', id: 1 },
-            { title: 'Chill', id: 2 },
-            { title: 'Dubstep', id: 3 },
-            { title: 'Indie', id: 4 },
-            { title: 'Rap', id: 5 },
-            { title: 'Cowbell', id: 6 }
-        ];
-    })
 
-    .controller('PlaylistCtrl', function ($scope, $stateParams) {
-    })
     .controller('MembersCtrl', ['$scope', 'Members', function ($scope, Members) {
 
 
-
-        $scope.teamData = Members.data;;
+        $scope.teamData = Members.data;
+        ;
 
         $scope.member = Members.data;
 
@@ -66,7 +53,6 @@ angular.module('starter.controllers', [])
             Members.selectedMember = member;
 
         };
-
 
 
 //        $scope.$on("memberSelected", function(event, args){
@@ -79,18 +65,23 @@ angular.module('starter.controllers', [])
 
         $scope.member = Members.selectedMember;
 
-        $scope.call = function(){
+        $scope.call = function () {
             console.log("Starting call with:", Members.selectedMember.tel); // todo: delete me
             window.location = "sip:" + Members.selectedMember.tel;
         };
 
-        $scope.im = function(){
+        $scope.im = function () {
             console.log("Starting IM with:", Members.selectedMember.o365email); // todo: delete me
             window.location = "xmpp:" + Members.selectedMember.o365email;
         };
 
 
+    }])
 
+    .controller('MenuCtrl', ['$scope', 'MatterFinance', function ($scope, MatterFinance) {
+        $scope.name = 'MenuCtrl';
+
+        $scope.matterFinance = MatterFinance;
     }])
 
 ;
